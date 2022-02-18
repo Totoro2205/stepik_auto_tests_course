@@ -1,11 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import pytest
 
 """
-Для успешного прохождения теста нужно выполнить из терминала
-pytest ./module3/les3_step3.py
-и скопировать результат между знаками равенства
+    Для успешного прохождения урока нужно выполнить из терминала
+    pytest ./module3/les3_step3.py
+    и скопировать результат между знаками равенства
 """
 
 def test_uniq_selector1():
