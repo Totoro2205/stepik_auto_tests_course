@@ -2,6 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
+"""
+Для успешного прохождения теста нужно выполнить из терминала
+pytest ./module3/les3_step3.py
+и скопировать результат между знаками равенства
+"""
+
 def test_uniq_selector1():
     browser = webdriver.Chrome()
     url = "http://suninjuly.github.io/registration1.html"
@@ -37,12 +43,3 @@ def test_uniq_selector2():
     welcome_text = welcome_text_elt.text
     assert "Congratulations! You have successfully registered!" == welcome_text, 'Registration error!!!'
 
-
-if __name__ == "__main__":
-    """
-    Для успешного прохождения теста нужно выполнить из терминала
-    pytest ./module3/les3_step3.py
-    и скопировать результат между знаками равенства
-    """
-    test_uniq_selector1()
-    test_uniq_selector2()
