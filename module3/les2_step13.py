@@ -4,7 +4,7 @@ import time
 import unittest
 
 
-class TestAbs(unittest.TestCase):
+class TestSelectors(unittest.TestCase):
     def test_uniq_selector1(self, url="http://suninjuly.github.io/registration1.html"):
         browser = webdriver.Chrome()
         browser.get(url)
