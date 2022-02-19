@@ -3,11 +3,6 @@ from selenium.webdriver.common.by import By
 import time
 import pytest
 
-"""
-    Для успешного прохождения урока нужно выполнить из терминала
-    pytest ./module3/les3_step3.py
-    и скопировать результат между знаками равенства
-"""
 
 def test_uniq_selector1():
     browser = webdriver.Chrome()
