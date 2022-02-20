@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import math
 
+
 @pytest.fixture(scope="function")
 def browser():
     browser = webdriver.Chrome()
@@ -27,7 +28,6 @@ def test_solver(browser, url):
     )
     answer = str(math.log(int(time.time())))
     input.send_keys(answer)
-    time.sleep(1)
     button = WebDriverWait(browser, 3).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, "button.submit-submission"))
     )
@@ -35,4 +35,4 @@ def test_solver(browser, url):
     fbmessage = WebDriverWait(browser, 20).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "pre.smart-hints__hint"))
     )
-    assert fbmessage.text == "Correct!", f'Got :{fbmessage.text}'
+    assert fbmessage.text == "Correct!", f'Got : "{fbmessage.text}"'
